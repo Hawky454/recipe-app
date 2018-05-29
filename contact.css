@@ -15,8 +15,6 @@ body {
 }
 
 .u-pull-right a {
-  color: black;
-  border: 2px solid black;
   font-weight: bold;
   font-size: 18px;
   margin: 5px;
@@ -27,11 +25,14 @@ body {
 
 main.search {
   text-align: right;
+  color: #555;
+}
+
+h2 {
+  color: #555;
 }
 
 .search .button {
-  color: black;
-  border: 2px solid black;
   font-weight: bold;
   font-size: 18px;
   margin: 8px;

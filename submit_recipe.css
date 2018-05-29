@@ -37,6 +37,13 @@ main.search {
   margin: 8px;
 }
 
+.form {
+  display: flex;
+  flex-direction:;
+
+
+}
+
 footer {
   bottom: 0;
   position: fixed;
