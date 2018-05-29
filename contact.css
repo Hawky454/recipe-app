@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('images/contact.jpg');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.u-pull-right a {
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+/*Don't touch anything above this line. */
+
+main.search {
+  text-align: right;
+}
+
+.search .button {
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+}

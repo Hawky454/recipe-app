@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('images/popular.jpg');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.u-pull-right a {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+/*Don't touch anything above this line. */
+
+main.search {
+  text-align: right;
+  color: #555;
+}
+
+.search .button {
+  color: #555;
+  border: 2px solid #555;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+}
