@@ -38,10 +38,8 @@ main.search {
 }
 
 .form {
-  display: flex;
-  flex-direction:;
-
-
+  width: 450px;
+  height: 215px;
 }
 
 footer {
