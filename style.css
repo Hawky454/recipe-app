@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('images/backdrop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.u-pull-right a {
+  color: black;
+  border: 2px solid black;
+}
