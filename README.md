@@ -31,6 +31,7 @@ Would like to add nutritional value to content.
     - What features will your project have? Think back to your answer to the question "How will this project solve that problem?". List what the feature is called and what it will do, and how it contributes to the solving of the problem of the Customer.
 - Project Description
     - Please describe your project!
-
+# Wireframe
+![WireframeQ1](https://github.com/Hawky454/recipe-app/blob/master/images/wireframeQ1.png)
 # Mockup
 ![Receipe app mockup](https://github.com/Hawky454/recipe-app/blob/master/images/receipe-app-mockup.jpg)
