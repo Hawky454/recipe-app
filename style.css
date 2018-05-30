@@ -24,6 +24,10 @@ body {
 
 
 /*Don't touch anything above this line. */
+h2 {
+  padding: 20px;
+}
+
 
 main.search {
   text-align: right;

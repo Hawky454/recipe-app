@@ -37,10 +37,20 @@ main.search {
   margin: 8px;
 }
 
-.form {
-  width: 450px;
-  height: 215px;
+h2 {
+  padding: 20px;
 }
+
+.form {
+  height: 130px;
+  width: 295px;
+  padding-left: 20px;
+  margin: auto;
+}
+
+
+
+
 
 footer {
   bottom: 0;
