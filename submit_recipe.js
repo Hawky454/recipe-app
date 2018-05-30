@@ -8,7 +8,7 @@ let thankYouDiv = document.getElementById('thankYou');
 submit.addEventListener('click', function(event) {
   event.preventDefault();
   if((firstName.value === '') || (lastName.value === '') || (email.value === '') || (recipe.value === '')) {
-    alert('Please fill out entire form before you hit the submit button');
+    alert('Please fill out the entire form before you hit the submit button!');
   } else {
     renderHTML();
   }
