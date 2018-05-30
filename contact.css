@@ -20,7 +20,6 @@ body {
   margin: 5px;
 }
 
-
 /*Don't touch anything above this line. */
 
 main.search {
@@ -39,7 +38,7 @@ h2 {
   margin: 8px;
 }
 
-footer {
+/* footer {
   bottom: 0;
   position: fixed;
-}
+} */

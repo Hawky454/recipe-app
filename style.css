@@ -4,6 +4,7 @@
 
 html, body {
   height: 100%;
+  overflow: scroll;
 }
 
 body {
@@ -22,12 +23,11 @@ body {
   margin: 5px;
 }
 
-
 /*Don't touch anything above this line. */
-h2 {
-  padding: 20px;
-}
 
+/* h2 {
+  padding: 20px;
+} */
 
 main.search {
   text-align: right;
