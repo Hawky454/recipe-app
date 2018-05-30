@@ -15,6 +15,6 @@ submit.addEventListener('click', function(event) {
 });
 
 function renderHTML() {
-  let thankYou = thankYouDiv.insertAdjacentHTML('beforeend', `Thank you ${firstName.value} ${lastName.value}! Unfortunately I don't have the skills to do anything with the data just yet. Hang tight, I'll get there in Q2.`);
+  let thankYou = thankYouDiv.insertAdjacentHTML('beforeend', `<p>Thank you, ${firstName.value} ${lastName.value}! Unfortunately I don't have the skills to do anything with the data just yet. Hang tight, I'll get there in Q2.<p>`);
   return thankYou;
 }
