@@ -30,7 +30,7 @@ searchButton.addEventListener('click', function(event) {
           // console.log(`log 3 var recipeData.href = ${recipeData[i].href}`);//retreives the image url.
         }
         console.log(`log 2 var displayResults = ${displayResults}`)
-
+        searchResults.setAttribute('src', displayResults);
       });
   }
 });
