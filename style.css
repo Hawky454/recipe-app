@@ -24,6 +24,26 @@ body {
 }
 
 /*Don't touch anything above this line. */
+#imageContainer{
+  margin: auto;
+  width: 50%;
+}
+section {
+  display: block;
+}
+section h1 {
+  font-size: 24px;
+}
+section img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 10px black;
+}
+section a {
+
+}
 
 h2 {
   padding: 20px;

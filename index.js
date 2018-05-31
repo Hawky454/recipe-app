@@ -1,6 +1,6 @@
 let searchButton = document.getElementById('searchButton');
 let searchField = document.getElementById('searchField');
-let searchResults = document.getElementById('searchResults');
+let searchResults = document.getElementById('imageContainer');
 let displayResults = [];
 
 // Optional Parameters:
@@ -23,14 +23,23 @@ searchButton.addEventListener('click', function(event) {
         let recipeData = data.results;
         // console.log(`log 1 var recipeData = ${recipeData}`);
         for (let i = 0; i < recipeData.length; i++) {
-          displayResults.push(recipeData[i].thumbnail);//need to also display ingredients & img.
-          // displayResults.push(recipeData[i].ingredients);
-          // console.log(`log 2 var displayResults = ${displayResults}`);
-          // console.log(recipeData[i].ingredients);
-          // console.log(`log 3 var recipeData.href = ${recipeData[i].href}`);//retreives the image url.
+          // displayResults.push(recipeData[i].thumbnail);//need to also display
+          let recipe = recipeData[i];
+          let recipeCard = document.createElement('section');
+          let recipeName = document.createElement('h1');
+          let recipeImage = document.createElement('img');
+          let recipeLink = document.createElement('a');
+
+          recipeName.innerText = recipe.title;
+          recipeImage.setAttribute('src', recipe.thumbnail);
+          recipeLink.setAttribute('href', recipe.href);
+          recipeCard.append(recipeName);
+          recipeCard.append(recipeImage);
+          recipeCard.append(recipeLink);
+          searchResults.append(recipeCard);
+          console.log(searchResults);
         }
-        console.log(`log 2 var displayResults = ${displayResults}`)
-        searchResults.setAttribute('src', displayResults);
+
       });
   }
 });
