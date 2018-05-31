@@ -28,6 +28,7 @@ body {
   margin: auto;
   width: 50%;
 }
+
 section {
   display: block;
   background-color: #1c2324;
@@ -35,10 +36,14 @@ section {
   border-radius: 10px;
   margin-top: 20px;
   width: inherit;
+  padding: 20px;
 }
+
 section h1 {
   font-size: 24px;
+  color: white;
 }
+
 section img {
   width: 150px;
   height: 150px;
@@ -46,12 +51,16 @@ section img {
   border-radius: 10px;
   box-shadow: 5px 10px black;
 }
+
 section a {
   color: orange;
   padding: 20px;
   text-decoration: none;
   text-align: justify;
   font-size: 20px;
+}
+section p {
+  color: white;
 }
 
 h2 {

@@ -26,11 +26,13 @@ searchButton.addEventListener('click', function(event) {
         for (let i = 0; i < recipeData.length; i++) {
           // displayResults.push(recipeData[i].thumbnail);//need to also display
           let recipe = recipeData[i];
+          let ingredients = document.createElement('p');
           let recipeCard = document.createElement('section');
           let recipeName = document.createElement('h1');
           let recipeImage = document.createElement('img');
           let recipeLink = document.createElement('a');
 
+          ingredients.innerText = `Ingredients: ${recipe.ingredients}`;
           recipeName.innerText = recipe.title;
           if (recipe.thumbnail === "") {
             recipeImage.setAttribute('src', 'http://eugenerugby.com/img/no-image-available.png');
@@ -39,10 +41,11 @@ searchButton.addEventListener('click', function(event) {
             recipeImage.setAttribute('src', recipe.thumbnail);
           }
 
-          console.log(`Thumbnail ${i}: ${recipe.thumbnail}`);
+          console.log(`Ingredients ${i}: ${recipe.ingredients}`);
           recipeLink.setAttribute('href', recipe.href);
           recipeLink.innerText = "View Recipe"
           recipeCard.append(recipeName);
+          recipeCard.append(ingredients);
           recipeCard.append(recipeImage);
           recipeCard.append(recipeLink);
           searchResults.append(recipeCard);
