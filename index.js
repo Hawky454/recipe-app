@@ -21,14 +21,15 @@ searchButton.addEventListener('click', function(event) {
       .then(response => response.json())
       .then(data => {
         let recipeData = data.results;
-        console.log(`log 1 var recipeData = ${recipeData}`);
+        // console.log(`log 1 var recipeData = ${recipeData}`);
         for (let i = 0; i < recipeData.length; i++) {
-          displayResults.push(recipeData[i].title);//need to also display ingredients & img.
+          displayResults.push(recipeData[i].thumbnail);//need to also display ingredients & img.
           // displayResults.push(recipeData[i].ingredients);
-          console.log(`log 2 var displayResults = ${displayResults}`);
+          // console.log(`log 2 var displayResults = ${displayResults}`);
           // console.log(recipeData[i].ingredients);
-          console.log(`log 3 var recipeData.href = ${recipeData[i].href}`);//retreives the image url.
+          // console.log(`log 3 var recipeData.href = ${recipeData[i].href}`);//retreives the image url.
         }
+        console.log(`log 2 var displayResults = ${displayResults}`)
 
       });
   }
