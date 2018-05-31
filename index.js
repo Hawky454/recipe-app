@@ -17,6 +17,7 @@ searchButton.addEventListener('click', function(event) {
     alert('Please type a recipe in the search input');
     searchField.setAttribute('style', 'background-color: #ff000073');
   } else {
+    searchResults.innerHTML = ""; //clearing search results.
     fetch(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q=${searchField.value}`)
       .then(response => response.json())
       .then(data => {
@@ -31,8 +32,16 @@ searchButton.addEventListener('click', function(event) {
           let recipeLink = document.createElement('a');
 
           recipeName.innerText = recipe.title;
-          recipeImage.setAttribute('src', recipe.thumbnail);
+          if (recipe.thumbnail === "") {
+            recipeImage.setAttribute('src', 'http://eugenerugby.com/img/no-image-available.png');
+            recipeImage.backgroundColor = 'black';
+          } else {
+            recipeImage.setAttribute('src', recipe.thumbnail);
+          }
+
+          console.log(`Thumbnail ${i}: ${recipe.thumbnail}`);
           recipeLink.setAttribute('href', recipe.href);
+          recipeLink.innerText = "View Recipe"
           recipeCard.append(recipeName);
           recipeCard.append(recipeImage);
           recipeCard.append(recipeLink);
