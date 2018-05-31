@@ -40,8 +40,8 @@ section {
 }
 
 section h1 {
-  font-size: 24px;
-  color: white;
+  font-size: 25px;
+  color: floralwhite;
 }
 
 section img {
@@ -60,7 +60,7 @@ section a {
   font-size: 20px;
 }
 section p {
-  color: white;
+  color: floralwhite;
 }
 
 h2 {
