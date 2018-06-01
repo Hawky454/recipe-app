@@ -10,8 +10,11 @@ submit.addEventListener('click', function(event) {
   if((firstName.value === '') || (lastName.value === '') || (email.value === '') || (recipe.value === '')) {
     alert('Please fill out the entire form before you hit the submit button!');
   } else {
+    thankYouDiv.innerHTML = ""
     renderHTML();
+    document.getElementById('form').reset();
   }
+  // document.getElementById('form').reset();
 });
 
 function renderHTML() {
