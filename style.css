@@ -9,7 +9,7 @@ html, body {
 
 body {
   background-image: url('images/backdrop.jpg');
-  background-color: black;
+  /* background-color: black; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
@@ -57,7 +57,7 @@ section a {
   padding: 20px;
   text-decoration: none;
   text-align: justify;
-  font-size: 20px;
+  font-size: 22px;
 }
 section p {
   color: floralwhite;

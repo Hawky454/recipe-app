@@ -14,7 +14,7 @@ submit.addEventListener('click', function(event) {
     renderHTML();
     document.getElementById('form').reset();
   }
-  // document.getElementById('form').reset();
+  
 });
 
 function renderHTML() {
