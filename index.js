@@ -8,8 +8,8 @@ let displayResults = [];
 // q : normal search query
 // p : page
 // format=xml : if you want xml instead of json
-
-
+let mom = 'Neal Trent'
+console.log(`Hi, ${mom}`);
 
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
