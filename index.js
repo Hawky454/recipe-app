@@ -10,7 +10,7 @@ searchButton.addEventListener('click', function(event) {
     alert('Please type a recipe in the search input');
     searchField.setAttribute('style', 'background-color: #ff000073');
   } else {
-    getRecipes() //{then}
+    getRecipes() 
     .then(data => {
       clearAndPopulate(data);
     });
@@ -26,10 +26,9 @@ function getRecipes() {
 
 
 function clearAndPopulate(data) {
-  searchResults.innerHTML = ""; //clears search resluts
+  searchResults.innerHTML = ''; //clears search results
         let recipeData = data.results;
         for (let i = 0; i < recipeData.length; i++) {
-          // displayResults.push(recipeData[i].thumbnail);//need to also display
           let recipe = recipeData[i];
           let ingredients = document.createElement('p');
           let recipeCard = document.createElement('section');
@@ -39,7 +38,7 @@ function clearAndPopulate(data) {
 
           ingredients.innerText = `Ingredients: ${recipe.ingredients}`;
           recipeName.innerText = recipe.title;
-          if (recipe.thumbnail === "") {
+          if (recipe.thumbnail === '') {
             recipeImage.setAttribute('src', 'http://eugenerugby.com/img/no-image-available.png');
             recipeImage.backgroundColor = 'black';
           } else {

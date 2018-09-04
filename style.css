@@ -9,7 +9,6 @@ html, body {
 
 body {
   background-image: url('images/backdrop.jpg');
-  /* background-color: black; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
@@ -23,7 +22,6 @@ body {
   margin: 5px;
 }
 
-/*Don't touch anything above this line. */
 #imageContainer{
   margin: auto;
   width: 50%;
