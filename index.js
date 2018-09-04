@@ -3,13 +3,6 @@ let searchField = document.getElementById('searchField');
 let searchResults = document.getElementById('imageContainer');
 let displayResults = [];
 
-// Optional Parameters:
-// i : comma delimited ingredients
-// q : normal search query
-// p : page
-// format=xml : if you want xml instead of json
-let mom = 'Neal Trent'
-console.log(`Hi, ${mom}`);
 
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
@@ -17,12 +10,24 @@ searchButton.addEventListener('click', function(event) {
     alert('Please type a recipe in the search input');
     searchField.setAttribute('style', 'background-color: #ff000073');
   } else {
-    searchResults.innerHTML = ""; //clearing search results.
-    fetch(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q=${searchField.value}`)
-      .then(response => response.json())
-      .then(data => {
+    getRecipes() //{then}
+    .then(data => {
+      clearAndPopulate(data);
+    });
+  }
+  });
+
+function getRecipes() {
+  return fetch(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?q=${searchField.value}`)
+  .then(response => response.json())
+  
+}
+
+
+
+function clearAndPopulate(data) {
+  searchResults.innerHTML = ""; //clears search resluts
         let recipeData = data.results;
-        // console.log(`log 1 var recipeData = ${recipeData}`);
         for (let i = 0; i < recipeData.length; i++) {
           // displayResults.push(recipeData[i].thumbnail);//need to also display
           let recipe = recipeData[i];
@@ -41,17 +46,13 @@ searchButton.addEventListener('click', function(event) {
             recipeImage.setAttribute('src', recipe.thumbnail);
           }
 
-          console.log(`Ingredients ${i}: ${recipe.ingredients}`);
+          //console.log(`Ingredients ${i}: ${recipe.ingredients}`);
           recipeLink.setAttribute('href', recipe.href);
           recipeLink.innerText = "View Recipe"
-          recipeCard.append(recipeName);
-          recipeCard.append(ingredients);
-          recipeCard.append(recipeImage);
-          recipeCard.append(recipeLink);
+          recipeCard.append(recipeName, ingredients, recipeImage, recipeLink);
           searchResults.append(recipeCard);
           console.log(searchResults);
         }
 
-      });
-  }
-});
+}
+
