@@ -3,7 +3,6 @@ let searchField = document.getElementById('searchField');
 let searchResults = document.getElementById('imageContainer');
 let displayResults = [];
 
-
 searchButton.addEventListener('click', function(event) {
   event.preventDefault();
   if (searchField.value === '') {
@@ -22,8 +21,6 @@ function getRecipes() {
   .then(response => response.json())
   
 }
-
-
 
 function clearAndPopulate(data) {
   searchResults.innerHTML = ''; //clears search results
@@ -45,13 +42,12 @@ function clearAndPopulate(data) {
             recipeImage.setAttribute('src', recipe.thumbnail);
           }
 
-          //console.log(`Ingredients ${i}: ${recipe.ingredients}`);
+
           recipeLink.setAttribute('href', recipe.href);
           recipeLink.innerText = "View Recipe"
           recipeCard.append(recipeName, ingredients, recipeImage, recipeLink);
           searchResults.append(recipeCard);
           console.log(searchResults);
         }
-
 }
 
